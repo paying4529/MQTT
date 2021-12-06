@@ -11,6 +11,7 @@
 3. Check mosquitto running
 
 `netstat -an | find "1883"`
+
 4. Open port 1883 on Windows firewall
 
 "防火牆" => "進階設定" => "輸入規則"&"輸出規則" => "新增規則" for TCP port 1883
@@ -20,11 +21,14 @@
 
 2. Add in the end of "mosquitto.conf"
 
-This line is necessary for other external to connect 
+
 `listener 1883`
 
-This line specify no need for pwd. 
+=> This line is necessary for other external to connect 
+
 `allow_anonymous true`
+
+=> This line specify no need for pwd. 
 
 
 3. Change to right directory 
